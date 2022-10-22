@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="en" ><link rel="icon"  href="images/icon.png">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0" >
+      
+        
+<link rel="stylesheet" href="styles/common_styles.css">
+
+<title>Omkaram.Punnam(Micro arts)</title>
+<style>
+   body{ 
+    top:0;left: 0;
+
+    background:  black  linear-gradient(to top,rgb(69, 30, 15),blue) ;
+ background-size: 100vw 100vh;
+
+   }
+   .continear{
+ 
+   
+    position:absolute;
+    display:fle;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+   }
+   .flex{
+    display: flex;
+   }
+   .box{
+    position:relative;
+    background-color: lue;width:260px;
+    height: 200px;
+   }
+   .micro{
+    position: absolute;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+   }
+
+   .micro img{
+    height:200px; background-color: aliceblue;
+    width: 200px;transition:0.5s;
+   }
+   .egg1 img,.tower img{
+    width: 125px;
+   }
+   .micro:hover img{
+    width: 260px;
+    box-shadow:0px 0px 10px 10px gold;
+   }
+
+   .egg1:hover img , .tower:hover img{
+    width: 160px;
+
+   }
+
+
+
+@media screen and (max-width:480px) {
+ 
+   .box{
+  
+    width:30vw;
+    height:35vw;
+   }
+
+   .micro img{
+    width: 25vw;transition:0.5s;
+   }
+
+ 
+   .micro:hover img{
+    width: 27vw;
+    box-shadow:0px 0px 5px 5px gold;
+   }
+
+    
+}
+
+</style>
+
+</head>
+
+         <!-----++++++++++++++---loading animation start--------++++++++++----->
+
+        <div id="preloader">
+            <div class="preloader_box">
+               
+                <div class="preloader_set1"></div>
+                <div class="preloader_set1"></div>
+                <div class="preloader_set1"></div>
+                <div class="preloader_set1"></div>
+        
+            </div>
+        
+            <div class="preloader_box ">
+              
+                <div class="preloader_set2 "></div>
+                <div class="preloader_set2 "></div>
+                <div class="preloader_set2 "></div>
+                <div class="preloader_set2 "></div>
+                <h1>loading...</h1>
+
+        </div>
+            </div>
+            <script>
+
+                var loader=document.getElementById("preloader");
+                window.addEventListener("load",function(){
+                  loader.style.display="none";
+                    var preloader_set1 = document.getElementsByClassName('preloader_set1');
+                    var preloader_set2 = document.getElementsByClassName('preloader_set2');
+                    for(j=0;j<4;j++){
+                        preloader_set1[j].style.animation='none';
+                        preloader_set2[j].style.animation='none';                     
+                    }
+
+                });
+            </script>
+         
+         <!--++++++++++-----loading animation end---++++++++++++++----->
+
+                                             <!----++++++++++-----navigation section start-----++++++++++++------>
+
+    <nav >
+        <ul class="links">
+            <li><a href="index.html" >Home</a></li>
+            <li id="active" class="no"><a href="about_me.html">About me</a></li> 
+          <li><a href="my_effort.html">My effort</a></li>
+            <li class="#"  id="contact" onclick="contact_open_close(1)"><a>Contact me</a></li>
+            <li><a onclick="document.getElementById('resumeform').submit();document.getElementById('my_resume').click();" >My resume</a></li>
+            
+            <form action="php_files/resume_php.php" id="resumeform" method="post" target="commoniframe" style="display:none;" hidden>
+                <input type="hidden" name="resumedownloaded" value="resume(micro arts)" style="display:none;">
+                
+                 <input type="hidden" name="_captcha" value="false" style="display:none;">
+           
+                <a href="---------resume----.pdf"  target="_blank" id="my_resume" style="display:none;" hidden></a>
+                <input type="hidden" name="_next"  value="https://---------your website---------/php_files/note_resume_success.html" style="display:none">
+                <input type="submit" id="resumetomail" formaction="https://formsubmit.co/-----------id----------- " style="display:none;" hidden>
+            </form>
+       
+            <div class="hire" onclick="hire_open_close('open');">Hire me</div>
+            
+            <svg width="50mm" onclick="shareopen()" id="share_img" height="50mm" viewBox="0 0 210 297" >
+                <g stroke="#000">
+                 <circle cx="50%" id="share_svg"cy="50%" r="50%" fill="rgb(162, 249, 0)" stroke-width="100" style="paint-order:stroke fill markers"/>
+
+                 <g fill-opacity="0" stroke-linecap="square" stroke-linejoin="round">
+                  <circle cx="70%" cy="30%" r="11%" stroke-width="14.85" style="paint-order:stroke fill markers"/>
+                  <circle cx="15%" cy="50%" r="11%" stroke-width="14.85" style="paint-order:stroke fill markers"/>
+                  <circle cx="70%" cy="70%" r="11%" stroke-width="14.85" style="paint-order:stroke fill markers"/>
+                 </g>
+                 <path d="m60.072 135.73 65.329-36.818" fill="none" stroke-width="17.82"/>
+                 <path d="m60.844 163.45 65.772 35.624" fill="none" stroke-width="17.82"/>
+                </g>
+               </svg>
+        </ul>
+        
+    </nav>
+            <!-----+++++++++++-------navigation section end-----++++++++++----->
+    
+
+
+                                <!-----++++++++++------contact section start--------+++++++++------>
+<div id="contact_cover">
+            
+   
+
+    <div id="contact_wrap">
+
+        <!------------------contact links------------------>
+          
+        <a href="-----------------your----profile link---------9" title="linkedin" target="_blank" ><img  id="contact_img1"src="images/linkedin.png" alt="linkedin"></a>
+
+        <a href="-----------------your----profile link---------" title="twitter" ><img id="contact_img2" src="images/twitter.png" alt="twitter"></a>
+
+        <a href="-----------------your----profile link---------" title="facebook" target="_blank" ><img id="contact_img3"src="images/Facebook_icon.png" alt="facebook"></a>
+
+        <a href="-----------------your----profile link---------"target="_blank" title="instagram" ><img id="contact_img4" src="images/Instagram_icon.png" alt="instagram"></a>
+
+        <!---------------message form--------------------->
+        <form action="php_files/contact_php.php"   method="post"  target="commoniframe" id="contact_form">
+            <hr>
+
+            <label for="message" style="font-size: 1.5em;color:rgb(255, 255, 255);font-weight:bold;">leve a message</label><br>
+
+            <input type="text" name="contact_name" id="contact_name" style="margin: 2px;padding: 2px;" placeholder="Enter your name" required><br>
+
+            <textarea name="contact_message" style="margin: 2px;padding: 3px;" id="contact_message" placeholder="say somthing" cols="22" rows="5" required></textarea><br>
+
+            <button type="submit" id="contact_submit"  disabled onclick="submit_process('open');contact_open_close(0);" style="padding: 5px;border-radius:10px;font-weight: bold;" >Submit</button>
+
+            <input type="submit" style="display:none;" id="contacttomail" formaction="https://formsubmit.co/------------id of form submit.co-------------------" >
+               <input type="hidden" name="_captcha" value="false" style="display:none">
+                <input type="hidden" name="_next"  value="https://--------------your website link----------/php_files/success.html" style="display:none;">
+        </form>
+
+
+ </div>
+
+  <div id="contact_close" onclick="contact_open_close(0)">
+
+    <svg  viewBox="0 0 210 297" >
+
+        <circle cx="104.67" cy="147.61" r="145.93" fill="#f00" stroke-width="2.3389" style="paint-order:stroke fill markers"/>
+
+        
+        
+        <path transform="matrix(1.5998 -.073748 .07309 1.6059 -64.541 4.256)" d="m157.33 154.69-56.008-40.002-59.881 33.93 40.002-56.008-33.93-59.881 56.008 40.002 59.881-33.93-40.002 56.008z" stroke-width=".4434" style="paint-order:stroke fill markers"/>
+        
+       </svg>
+
+</div>
+</div>
+
+<!-----+++++++++++-----contact section end------++++++++++++++++------>
+
+
+
+ <!---++++++++++++++-------share section start-----------++++++++++++++++----->
+
+
+
+
+            <div id="share_cover">
+                <div id="share_wrap">
+            
+            
+                     
+                     <!---------------share items start-------------------->
+                    <div class="share_items" >
+            
+            
+                   
+                        
+                        <a href="mailto:?subject= ------your name------- Portfolio &body=-----------your website link" target="_blank">  <img id="email" title="share through Email"  src="images/email.png"  alt="mail"></a>
+                
+                        <a href="whatsapp://send?text= ------your name------- Portfolio : -----------your website link" target="_blank"><img id="whatsapp" title="share through Whatsapp"src="images/whatsapp.png" alt="Whatsapp"></a>
+                
+                      <a href="https://twitter.com/share?url=-----------your website link&text= ------your name------- portfolio&hashtags=0mkar99" target="_blank">  <img id="twitter" title="share through Twitter"  src="images/twitter.png" alt="Twitter"></a>
+                
+                       <a href="https://www.linkedin.com/shareArticle?url=-----------your website link&title= ------your name------- portfolio" target="_blank"> <img id="linkedin" title="share through Linkedin" src="images/linkedin.png" alt="Linkedin"></a>
+                
+                         <a href="https://www.facebook.com/sharer.php?u=-----------your website link" target="_blank"><img id="facebook" title="share through Facebook" src="images/Facebook_icon.png" alt="Facebook"></a>
+                   </div>
+                     
+                     <!---------------share items end-------------------->
+                   
+                     
+                    
+            
+            <div id="share_copy_area" >
+            <input id="share_text_place" value="-----------your website link" title="-----------your website link" type="text" readonly>
+            
+
+            <div id="copyimgcontinar" title="copy to clipboard" >
+                <p id="copynoteid" onclick="copytext();">Copy</p></div>
+            </div>
+            
+            
+                </div> 
+            </div>
+            
+            
+                             <!-----+++++++++++++---share section end----+++++++++++++++----->
+                       
+            
+    
+                             <!--+++++++++++++++++---hire me section start ------++++++++++++++----->
+
+
+    <div id="hire_cover">
+
+
+        <div id="hire_wrap" >
+            
+          
+    
+    
+    
+            <img id="scroll_img" src="images/hire_me_form_background.png" alt="hire me form background">
+                
+                   <div id="hire_me_rebbun" style="text-align:center;">
+        <img src="images//hire_me_rebbun.png" alt="hire me rebbun"> </div>
+        
+                <form id="hire_form"  action="php_files/hire_me_php.php"   method="post"  target="commoniframe">
+
+                    
+                    <input type="text" id="fullname" name="fullname(hire)"  placeholder="Enter your full name" required>
+                    <br>
+                    <input  type="Email" id="hire_email" name="email(hire)" placeholder="Enter Email ID" required>
+                    <br >
+    
+                    <input type="tel" name="mobile_no(hire)" title="must be 10 digits" id="mobile_no" placeholder="Enter contact mobile number" pattern="[0-9]{10}" required>
+    
+                    <select name="mobile_code(hire)" id="mobile_code" title="select mobile code" value="+91">
+    
+    
+                        <option value=" +91 "> +91 </option>                
+                        <option value=" +1 "> +1 </option>    <option value=" +7 "> +7 </option>
+                        <option value=" +20 "> +20 </option>    <option value=" +27 "> +27 </option>
+                        <option value=" +31 "> +31 </option>    <option value=" +32 "> +32 </option>
+                        <option value=" +33 "> +33 </option>    <option value=" +34 "> +34 </option>
+                        <option value=" +36 "> +36 </option>    <option value=" +39 "> +39 </option>
+                        <option value=" +40 "> +40 </option>    <option value=" +41 "> +41 </option>
+                        <option value=" +43 "> +43 </option>    <option value=" +44 "> +44 </option>
+                        <option value=" +47 "> +47 </option>    <option value=" +48 "> +48 </option>
+                        <option value=" +49 "> +49 </option>    <option value=" +51 "> +51 </option>
+                        <option value=" +52 "> +52 </option>    <option value=" +55 "> +55 </option>
+                        <option value=" +61 "> +61 </option>    <option value=" +62 "> +62 </option>
+                        <option value=" +63 "> +63 </option>    <option value=" +64 "> +64 </option>
+                        <option value=" +65 "> +65 </option>    <option value=" +66 "> +66 </option>
+                        <option value=" +81 "> +81 </option>    <option value=" +82 "> +82 </option>
+                        <option value=" +84 "> +84 </option>    <option value=" +86 "> +86 </option>
+                        <option value=" +94 "> +94 </option>    <option value=" +98 "> +98 </option>
+                        <option value=" +212 "> +212 </option>    <option value=" +218 "> +218 </option>
+                        <option value=" +251 "> +251 </option>    <option value=" +258 "> +258 </option>
+                        <option value=" +260 "> +260 </option>    <option value=" +264 "> +264 </option>
+                        <option value=" +268 "> +268 </option>    <option value=" +299 "> +299 </option>
+                        <option value=" +353 "> +353 </option>    <option value=" +381 "> +381 </option>
+                        <option value=" +507 "> +507 </option>    <option value=" +670 "> +670 </option>
+                        <option value=" +680 "> +680 </option>    <option value=" +850 "> +850 </option>
+                        <option value=" +852 "> +852 </option>    <option value=" +880 "> +880 </option>
+                        <option value=" +960 "> +960 </option>    <option value=" +964 "> +964 </option>
+                        <option value=" +966 "> +966 </option>    <option value=" +968 "> +968 </option>
+                        <option value=" +971 "> +971 </option>    <option value=" +972 "> +972 </option>
+                        <option value=" +976 "> +976 </option>    <option value=" +977 "> +977 </option>
+                                            
+                        
+                                        </select>
+                                        
+                                        <br>
+                        
+                                        <input type="text" name="compenyname(hire)" id="compenyname" placeholder="Enter company name" required>
+                                        <br>   
+                        
+                                        <input type="text" name="jobroll(hire)" id="jobroll" placeholder="Enter job roll" required>
+                                        <br>
+                        
+                                        
+                                        <input type="number" name="ctcpa(hire)" id="ctc" placeholder="Enter the CTC per Annum"  required>
+                                        <select name="currentcy" id="currentcy" title="select currency" value="INR">
+                        
+                        <option value="INR" >INR</option>
+                        <option value=" AED "> AED </option>    <option value=" AFN "> AFN </option>
+                        <option value=" ALL "> ALL </option>    <option value=" AMD "> AMD </option>
+                        <option value=" ANG "> ANG </option>    <option value=" AOA "> AOA </option>
+                        <option value=" ARS "> ARS </option>    <option value=" AUD "> AUD </option>
+                        <option value=" AWG "> AWG </option>    <option value=" AZG "> AZG </option>
+                        <option value=" BAM "> BAM </option>    <option value=" BBD "> BBD </option>
+                        <option value=" BDT "> BDT </option>    <option value=" BGN "> BGN </option>
+                        <option value=" BHD "> BHD </option>    <option value=" BIF "> BIF </option>
+                        <option value=" BMD "> BMD </option>    <option value=" BND "> BND </option>
+                        <option value=" BOB "> BOB </option>    <option value=" BOV "> BOV </option>
+                        <option value=" BRL "> BRL </option>    <option value=" BSD "> BSD </option>
+                        <option value=" BTN "> BTN </option>    <option value=" BWP "> BWP </option>
+                        <option value=" BYN "> BYN </option>    <option value=" BYR "> BYR </option>
+                        <option value=" BZR "> BZR </option>    <option value=" CAD "> CAD </option>
+                        <option value=" CDF "> CDF </option>    <option value=" CHE "> CHE </option>
+                        <option value=" CHF "> CHF </option>    <option value=" CHW "> CHW </option>
+                        <option value=" CLF "> CLF </option>    <option value=" CLP "> CLP </option>
+                        <option value=" CNY "> CNY </option>    <option value=" COP "> COP </option>
+                        <option value=" COU "> COU </option>    <option value=" CRC "> CRC </option>
+                        <option value=" CUC "> CUC </option>    <option value=" CUP "> CUP </option>
+                        <option value=" CVE "> CVE </option>    <option value=" CZK "> CZK </option>
+                        <option value=" DJF "> DJF </option>    <option value=" DKK "> DKK </option>
+                        <option value=" DOP "> DOP </option>    <option value=" DZD "> DZD </option>
+                        <option value=" EGP "> EGP </option>    <option value=" ERN "> ERN </option>
+                        <option value=" ETB "> ETB </option>    <option value=" EUR "> EUR </option>
+                        <option value=" FJD "> FJD </option>    <option value=" FKP "> FKP </option>
+                        <option value=" GBP "> GBP </option>    <option value=" GEL "> GEL </option>
+                        <option value=" GHS "> GHS </option>    <option value=" GIP "> GIP </option>
+                        <option value=" GMD "> GMD </option>    <option value=" GNF "> GNF </option>
+                        <option value=" GTQ "> GTQ </option>    <option value=" GYD "> GYD </option>
+                        <option value=" HKD "> HKD </option>    <option value=" HNL "> HNL </option>
+                        <option value=" HRK "> HRK </option>    <option value=" HTG "> HTG </option>
+                        <option value=" HUF "> HUF </option>    <option value=" IDR "> IDR </option>
+                        <option value=" ILS "> ILS </option>    <option value=" IQD "> IQD </option>
+                        <option value=" IRR "> IRR </option>    <option value=" ISK "> ISK </option>
+                        <option value=" JMD "> JMD </option>    <option value=" JOD "> JOD </option>
+                        <option value=" JPY "> JPY </option>    <option value=" KES "> KES </option>
+                        <option value=" KGS "> KGS </option>    <option value=" KHR "> KHR </option>
+                        <option value=" KMF "> KMF </option>    <option value=" KPW "> KPW </option>
+                        <option value=" KRW "> KRW </option>    <option value=" KWD "> KWD </option>
+                        <option value=" KYD "> KYD </option>    <option value=" KZT "> KZT </option>
+                        <option value=" LAK "> LAK </option>    <option value=" LBP "> LBP </option>
+                        <option value=" LKR "> LKR </option>    <option value=" LRD "> LRD </option>
+                        <option value=" LSL "> LSL </option>    <option value=" LYD "> LYD </option>
+                        <option value=" MAD "> MAD </option>    <option value=" MDL "> MDL </option>
+                        <option value=" MGA "> MGA </option>    <option value=" MKD "> MKD </option>
+                        <option value=" MMK "> MMK </option>    <option value=" MNT "> MNT </option>
+                        <option value=" MOP "> MOP </option>    <option value=" MRO "> MRO </option>
+                        <option value=" MUR "> MUR </option>    <option value=" MVR "> MVR </option>
+                        <option value=" MWK "> MWK </option>    <option value=" MXN "> MXN </option>
+                        <option value=" MXV "> MXV </option>    <option value=" MYR "> MYR </option>
+                        <option value=" MZN "> MZN </option>    <option value=" NAD "> NAD </option>
+                        <option value=" NGN "> NGN </option>    <option value=" NOI "> NOI </option>
+                        <option value=" NOK "> NOK </option>    <option value=" NPR "> NPR </option>
+                        <option value=" NZD "> NZD </option>    <option value=" OMR "> OMR </option>
+                        <option value=" PAB "> PAB </option>    <option value=" PEN "> PEN </option>
+                        <option value=" PGK "> PGK </option>    <option value=" PHP "> PHP </option>
+                        <option value=" PKR "> PKR </option>    <option value=" PLN "> PLN </option>
+                        <option value=" PYG "> PYG </option>    <option value=" QAR "> QAR </option>
+                        <option value=" RON "> RON </option>    <option value=" RSD "> RSD </option>
+                        <option value=" RUB "> RUB </option>    <option value=" RWF "> RWF </option>
+                        <option value=" SAR "> SAR </option>    <option value=" SBD "> SBD </option>
+                        <option value=" SCR "> SCR </option>    <option value=" SDG "> SDG </option>
+                        <option value=" SEK "> SEK </option>    <option value=" SGD "> SGD </option>
+                        <option value=" SHP "> SHP </option>    <option value=" SLL "> SLL </option>
+                        <option value=" SOS "> SOS </option>    <option value=" SRD "> SRD </option>
+                        <option value=" SSP "> SSP </option>    <option value=" STD "> STD </option>
+                        <option value=" SVC "> SVC </option>    <option value=" SYP "> SYP </option>
+                        <option value=" SZL "> SZL </option>    <option value=" THB "> THB </option>
+                        <option value=" TJS "> TJS </option>    <option value=" TMT "> TMT </option>
+                        <option value=" TND "> TND </option>    <option value=" TOP "> TOP </option>
+                        <option value=" TRY "> TRY </option>    <option value=" TTD "> TTD </option>
+                        <option value=" TWD "> TWD </option>    <option value=" TZS "> TZS </option>
+                        <option value=" UAH "> UAH </option>    <option value=" UGX "> UGX </option>
+                        <option value=" USD "> USD </option>    <option value=" USN "> USN </option>
+                        <option value=" UYI "> UYI </option>    <option value=" UYU "> UYU </option>
+                        <option value=" UZS "> UZS </option>    <option value=" VEF "> VEF </option>
+                        <option value=" VND "> VND </option>    <option value=" VUV "> VUV </option>
+                        <option value=" WST "> WST </option>    <option value=" XAF "> XAF </option>
+                        <option value=" XAG "> XAG </option>    <option value=" XAU "> XAU </option>
+                        <option value=" XBA "> XBA </option>    <option value=" XBB "> XBB </option>
+                        <option value=" XBC "> XBC </option>    <option value=" XBD "> XBD </option>
+                        <option value=" XCD "> XCD </option>    <option value=" XDR "> XDR </option>
+                        <option value=" XOF "> XOF </option>    <option value=" XPD "> XPD </option>
+                        <option value=" XPF "> XPF </option>    <option value=" XPT "> XPT </option>
+                        <option value=" XSU "> XSU </option>    <option value=" XTS "> XTS </option>
+                        <option value=" XUA "> XUA </option>    <option value=" YER "> YER </option>
+                        <option value=" ZAR "> ZAR </option>    <option value=" ZMW "> ZMW </option>
+                        <option value=" ZWL "> ZWL </option>
+    
+    
+                    </select><br>
+                    <textarea name="hire_message(hire)" id="hire_message" cols="25" rows="5" placeholder="is there any thing to say? (optional)"></textarea>
+                    <br>
+    
+                    <button id="hire_submit" disabled onclick="submit_process('open');hire_open_close('close');"  type="submit"><p>SUBMIT</p> <img src="images/hire_me_submit_image.png" alt="hire me submit image"></button>
+                    
+                    <input type="submit" style="display:none;" id="hiretomail" formaction="https://formsubmit.co/------------id of form submit.co-------------------" >
+
+                     <input type="hidden" name="_captcha" value="false" style="display:none">
+                <input type="hidden" name="_next"  value="https://--------------your website link----------/php_files/success.html" style="display:none">
+                </form>
+                <button onclick="hire_open_close('close')" id="hire_form_close">close</button>
+        </div>
+    </div>
+        
+                             <!-----+++++++++++++++++----hire me section end ------++++++++++++++++------->
+    
+    
+
+
+
+                            <!------++++++++++-----star rating section start-------+++++++++++------>
+    
+    
+    
+    
+<div id="stars">
+    <p>Rate this web site</p>
+<div style="display:flex;justify-content: center;text-align: center;">
+<svg onclick="star_no(1)" width="250px" height="250px"  viewBox="0 0 210 297">
+    <path class="feed_star" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe"  stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+   </svg>
+   
+<svg onclick="star_no(2)" width="250px" height="250px"  viewBox="0 0 210 297">
+    <path class="feed_star" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe" stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+   </svg>
+   
+<svg onclick="star_no(3)" width="250px" height="250px"  viewBox="0 0 210 297">
+    <path class="feed_star" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe" stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+   </svg>
+   
+<svg onclick="star_no(4)" width="250px" height="250px"  viewBox="0 0 210 297">
+    <path class="feed_star" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe" stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+   </svg>
+      
+<svg onclick="star_no(5)" width="250px" height="250px"  viewBox="0 0 210 297">
+    <path class="feed_star" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe" stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+   </svg>
+
+</div>
+<form action="php_files/stars_php.php" method="post" target="commoniframe" id="feed_form" style="display: none;position: absolute; margin:0 6vw;" >
+
+    <input type="hidden" name="star_rating" id="star_rating" hidden>
+ <input type="hidden" name="_captcha" value="false" style="display:none" hidden>
+     
+ <input type="hidden" name="_next"  value="https://--------------your website link----------/php_files/note_resume_success.html" style="display:none">
+ 
+ <input type="submit" id="star_submit" formaction="https://formsubmit.co/------------id of form submit.co-------------------"  style="display:none;">
+</form>
+</div>
+
+
+
+<div id="star_note_cover">
+         
+    <div id="star_note_wrap">
+    <svg width="250px" class="star_svg" height="250px"  viewBox="0 0 210 297">
+        <path class="star_note" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe"  stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+       </svg>
+
+       <svg  width="250px" class="star_svg" height="250px"  viewBox="0 0 210 297">
+        <path class="star_note" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe"  stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+       </svg>
+
+       <svg  width="250px" class="star_svg" height="250px"  viewBox="0 0 210 297">
+        <path class="star_note" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe"  stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+       </svg>
+
+       <svg  width="250px" class="star_svg" height="250px"  viewBox="0 0 210 297">
+        <path class="star_note" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe"  stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+       </svg>
+
+       <svg  width="250px" class="star_svg" height="250px"  viewBox="0 0 210 297">
+        <path class="star_note" transform="matrix(1.188,0,0,1.188,-43.5,0)" d="m228.39 99.6-68.241 44.606 29.71 77.117-63.51-51.117-64.162 52.086 28.989-76.198-69.364-44.926 81.427 4.0241 21.293-79.852 21.335 78.685z" fill="#bebebe"  stroke="#000" stroke-width="10" style="paint-order:stroke fill markers"/>
+       </svg></div> 
+    </div>
+<!------++++++++++--------star rating start end-----+++++++++++------>
+
+
+<iframe src="php_files/inintial.html" id="submit_iframe" onload="chickiframeform();" title="blank" name="commoniframe" style="display: none;" hidden></iframe>
+                                          <!----+++++++++---------submit animation section start-------++++++++-------->
+          
+<div id="submit_notecover">
+    
+    <div id="submit_notewrap">
+    
+        <div id="submit_bord"> <img src="images/planets/alien_with_bord.png" alt="alien with bord">
+            <p id="submit_noteplace">Prossing..</p>
+        </div></div>
+        <div  id="submit_ufo">
+            <img id="ufo_light" src="images/planets/ufo_light.png" alt="ufo light">
+        <img id="submit_ufo_img" src="images/planets/submit_ufo.png" alt="ufo">
+    </div>
+</div>
+
+                                    <!--- +++++++++--------------submit animation section end------++++++++------->
+
+
+
+
+
+
+    <body onload="document.getElementById('notemeform').submit();">
+
+
+
+        <form id="notemeform" action="php_files/note_me_php.php" target="commoniframe" method="post" style="display:none;">
+          <input type="hidden" name="_captcha" value="false" style="display:none">
+                 
+          <input type="hidden" name="_next"  value="https://--------------your website link----------/php_files/note_resume_success.html" style="display:none">
+          <input type="hidden" name="visited" value="about me" hidden>
+          <input type="submit" id="visittoform" formaction="https://formsubmit.co/------------id of form submit.co-------------------"style="display:none;" hidden>
+     
+         </form>
+
+         <!--++++++++++++ micro arts section start-------++++++++++-->
+
+  <div class="continear">
+
+
+
+    <!--flex 1 start-->
+ 
+
+    <div class="flex">
+
+
+    <!--box 1-1 start-->
+   
+    <div class="box">
+        <a href="------arts images icon/for preview------- .png" target="_blank">
+            <div class="micro art1">
+                <img src="------arts images-------.png" alt="micro art1">
+            </div>
+        </a>
+    </div>
+ <!--box 1-1 end-->
+
+<!--box 1-2 start-->
+  
+
+ <div class="box">
+        <a href="------arts images icon/for preview------- .jpg" target="_blank">
+            <div class="micro art2">
+                <img src="------arts images------- " alt="micro art2">
+            </div>
+        </a>
+    </div>
+
+  <!--box 1-2 end-->
+
+<!--box 1-3 start-->
+   
+    <div class="box">
+        <a href="------arts images icon/for preview------- ..jpg" target="_blank">
+            <div class="micro art3">
+                <img src="------arts images-------.jpg" alt="micro art3">
+            </div>
+        </a>
+    </div>
+ <!--box 1-3 end-->
+
+
+</div>
+   <!--flex 1 end-->
+
+
+
+
+
+    <!--flex 2 start-->
+   
+<!--box 2-1 start-->
+
+<div class="flex">
+    <div class="box">
+        <a href="------arts images icon/for preview------- ..jpg" target="_blank">
+            <div class="micro art4">
+                <img src="------arts images-------.jpg" alt="micro art4">
+            </div>
+        </a>
+    </div>
+
+    <!--box 2-1 end-->
+
+    <!--box 2-2 start-->
+ 
+
+    <div class="box">
+        <a href="------arts images icon/for preview------- ..jpg" target="_blank">
+            <div class="micro art5">
+                <img src="------arts images-------.jpg" alt="micro art5">
+            </div>
+        </a>
+    </div>
+   <!--box 2-2 end-->
+
+   <!--box 2-3 start-->
+   
+    <div class="box">
+        <a href="------arts images icon/for preview------- ..jpg" target="_blank">
+            <div class="micro art6">
+                <img src="------arts images-------.jpg" alt="micro art6">
+            </div>
+        </a>
+    </div>
+ <!--box 2-3 end-->
+
+  </div></div>
+       <!--flex 3 end-->
+
+
+         <!--++++++++++++ micro arts section end-------++++++++++-->
+     
+            
+   
+           
+        </body>
+        <script src="js_scrpts/common_js.js"></script>
+        
+            <footer><a href="https://omkar99.epizy.com">https://omkar99.epizy.com</a></footer>
+        
+        
+        </html>

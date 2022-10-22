@@ -1,0 +1,666 @@
+body {
+   background-image: url("../images/homebackgroundHD.jpg");
+   background-size: 100%;
+   background-color: black;
+}
+
+
+
+/*----++++++++++------planers start----------+++++++----------*/
+
+.planets_container {
+   position: fixed;
+   z-index: -5;
+   width: 100%;
+   height: 100%;
+}
+
+.mouse_tracker {
+   position: fixed;
+   z-index: 5;
+   width: 100%;
+   height: 100vh;
+
+}
+
+
+.planet {
+   position: inherit;
+   display: inline-block;
+}
+
+.planet:nth-child(1) {
+   right: 3vw;
+   top: 10vh;
+
+}
+
+.planet:nth-child(1) img {
+   width: 2vw;
+
+}
+
+.planet:nth-child(2) {
+   right: 6vw;
+   top: 15vh;
+}
+
+.planet:nth-child(2) img {
+   width: 7vw;
+
+}
+
+.planet:nth-child(3) {
+   right: 15vw;
+   top: 20vh;
+}
+
+.planet:nth-child(3) img {
+   width: 12vw;
+
+}
+
+.planet:nth-child(4) {
+   right: 25vw;
+   top: 22vh;
+}
+
+.planet:nth-child(4) img {
+   width: 13vw;
+
+}
+
+.planet:nth-child(5) {
+   right: 35vw;
+   top: 25vh;
+}
+
+.planet:nth-child(5) img {
+   width: 30vw;
+
+}
+
+.planet:nth-child(6) {
+   right: 65vw;
+   top: 55vh;
+}
+
+.planet:nth-child(6) img {
+   width: 14vw;
+
+}
+
+.planet:nth-child(7) {
+   right: 80vw;
+   top: 65vh;
+}
+
+.planet:nth-child(7) img {
+   width: 18vw;
+
+}
+
+/*----++++++++++------planers end----------+++++++----------*/
+
+
+/*--------+++++++++++-------- background animation start-------++++++++++--------*/
+
+.planet:nth-child(8) {
+   top: 10vh;
+   left: -2vw;
+
+}
+
+.planet:nth-child(8) img {
+   width: 10vw;
+
+   transform-style: preserve-3d;
+
+   transform: scale(0) rotateY(45deg) rotateZ(0deg);
+
+}
+
+@keyframes portal {
+   0% {
+      transform: rotateY(45deg) rotateZ(0deg);
+   }
+
+   15% {
+      transform: scale(1) rotateY(45deg) rotateZ(2000deg);
+
+   }
+
+   85% {
+      transform: scale(1) rotateY(45deg) rotateZ(3000deg);
+
+
+   }
+
+   95% {
+      transform: scale(0) rotateY(45deg) rotateZ(5000deg);
+   }
+
+   100% {
+
+
+      transform: scale(0) rotateY(45deg) rotateZ(7000deg);
+
+   }
+}
+
+.planet:nth-child(9) {
+   bottom: 0vh;
+   right: -2vw;
+
+}
+
+.planet:nth-child(9) img {
+
+   width: 20vw;
+
+
+
+   transform-style: preserve-3d;
+
+   transform: scale(0) rotateY(45deg) rotateZ(0deg);
+
+}
+
+
+.planet:nth-child(10) {
+   top: calc(10vh + 4vw);
+   left: 2vw;
+   z-index: 0;
+}
+
+.planet:nth-child(10) img {
+   width: 2vw;
+
+   transform: scale(0);
+   transform-style: preserve-3d;
+   rotate: 30deg;
+}
+
+@keyframes ufo_path {
+
+   0% {}
+
+   100% {
+      top: calc(100vh - 11vw);
+      left: 89vw;
+   }
+}
+
+@keyframes ufo {
+   15% {
+      transform: scale(1);
+
+   }
+
+   97% {
+      transform: scale(1);
+   }
+
+   99% {
+      opacity: 1;
+      transform: scale(0);
+
+   }
+
+   100% {
+      width: 8vw;
+      opacity: 0;
+   }
+
+}
+
+
+.planet:nth-child(11) {
+   top: 10vh;
+   left: 20vw;
+
+}
+
+.planet:nth-child(11) img {
+   width: 10vw;
+   transform: ske(-5deg, -10deg);
+
+
+   transform-style: preserve-3d;
+   transform: scale(0) rotateY(45deg) rotateZ(0deg);
+
+}
+
+#spaceSship {
+   position: fixed;
+   display: inline-block;
+   top: calc(10vh + 4vw);
+   left: 24vw;
+}
+
+#space_ship_img {
+   width: 3vw;
+
+   transform: scale(0);
+   transform-style: preserve-3d;
+   rotate: -50deg;
+
+}
+
+@keyframes spaceship_path {
+
+   0% {}
+
+   100% {
+      top: calc(100vh - 10vw);
+      left: 89vw;
+   }
+}
+
+@keyframes spaceship {
+   15% {
+      transform: scale(1);
+
+   }
+
+   97% {
+      opacity: 1;
+      transform: scale(1);
+   }
+
+   98% {
+      opacity: 0;
+      transform: scale(0);
+   }
+
+   100% {
+      width: 12vw;
+      opacity: 0;
+      rotate: -10deg;
+      transform: scale(0);
+   }
+
+}
+
+
+
+#portal2_cover {
+   position: fixed;
+   display: inline-block;
+   bottom: 0vh;
+   right: -2vw;
+
+
+}
+
+#portal2_cover_img {
+
+   width: 20vw;
+   transform-style: preserve-3d;
+   transform: scale(0) rotateY(45deg) rotateZ(0deg);
+
+}
+
+/*--------+++++++++++-------- background animation start-------++++++++++--------*/
+
+/*---------+++++++++++++---------photo and name start --------+++++++++++----------*/
+
+.my_img {
+
+   background: url(../images/my_photo.png) no-repeat;
+
+   background-size: contain;
+   background-position: center;
+   box-sizing: border-box;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 50vw;
+   height: 20vw;
+   margin: 0;
+   color: rgb(255, 255, 255);
+   font-size: 2vw;
+   line-height: 170%;
+
+}
+
+
+.my_img .my_cover {
+   line-height: 150%;
+   margin: 5% 0 0 12.5%;
+   width: max-content;
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   height: 30%;
+   transform: translate(-50%, -50%);
+
+}
+
+.my_name {
+   position: relative;
+   line-height: 150%;
+   margin-left: 20%;
+   width: max-content;
+   height: 50%;
+   display: inline-flex;
+   overflow: hidden;
+   top: 0;
+   box-sizing: border-box;
+
+}
+
+.my_img .my_name ul {
+   height: 120%;
+   position: relative;
+   color: rgb(0, 225, 255);
+   text-shadow: 1px 1px 5px rgb(255, 47, 47);
+   font-weight: bold;
+   list-style-type: none;
+   margin: 0 0 0 1vw;
+   font-family: 'Trebuchet MS', sans-serif;
+   padding-right: 0px;
+}
+
+
+
+.my_img ul li {
+   padding: 0;
+   height: 100%;
+   position: relative;
+   width: max-content;
+   top: 0px;
+   animation: uping 18s steps(3) infinite;
+}
+
+@keyframes uping {
+
+
+   100% {
+      top: -300%;
+   }
+
+}
+
+.my_img ul li span {
+   height: 100%;
+   position: relative;
+
+}
+
+.my_img ul li span::after {
+   font-weight: bold;
+   background-color: black;
+   content: " ";
+   position: absolute;
+   overflow: hidden;
+   border-left: 2px solid white;
+   left: 0;
+   width: 100%;
+   height: 130%;
+   animation: line 6s steps(19) infinite;
+
+}
+
+@keyframes line {
+   50% {
+      left: 97%;
+      margin: 0 0px 0 10px;
+   }
+
+   100% {
+      left: 0%;
+   }
+
+}
+
+/*---------+++++++++++++---------photo and name end --------+++++++++++----------*/
+
+
+
+
+
+/*+++++++++*******++++++++++++------ midia with max-width:1000px srart-----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:1000px srart-----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:1000px srart-----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:1000px srart-----++++++++++++*********+++++++++++*/
+
+
+
+
+@media screen and (max-width:1000px) {
+
+
+/*---------+++++++++++++---------photo and name start (1000px)--------+++++++++++----------*/
+
+   .my_img {
+      width: 96vw;
+      height: 35vw;
+      line-height: 25px;
+      font-size: 3.5vw;
+      color: rgb(254, 254, 254);
+
+   }
+
+   .my_img .my_name ul {
+      margin: 0 0 0 5px;
+   }
+
+/*---------+++++++++++++---------photo and name end (1000px) --------+++++++++++----------*/
+
+/*--------------planets start (1000px)------------*/
+
+   .planet:nth-child(1) {
+      right: 3vw;
+      top: 10vh;
+
+   }
+
+   .planet:nth-child(1) img {
+      width: 5vw;
+
+   }
+
+   .planet:nth-child(2) {
+      right: 6vw;
+      top: 15vh;
+   }
+
+   .planet:nth-child(2) img {
+      width: 14vw;
+
+   }
+
+   .planet:nth-child(3) {
+      right: 15vw;
+      top: 17vh;
+   }
+
+   .planet:nth-child(3) img {
+      width: 24vw;
+
+   }
+
+   .planet:nth-child(4) {
+      right: 25vw;
+      top: 22vh;
+   }
+
+   .planet:nth-child(4) img {
+      width: 26vw;
+
+   }
+
+   .planet:nth-child(5) {
+      right: 30vw;
+      top: 30vh;
+   }
+
+   .planet:nth-child(5) img {
+      width: 50vw;
+
+   }
+
+   .planet:nth-child(6) {
+      right: 60vw;
+      top: 58vh;
+   }
+
+   .planet:nth-child(6) img {
+      width: 28vw;
+
+   }
+
+   .planet:nth-child(7) {
+      right: 70vw;
+      top: 75vh;
+   }
+
+   .planet:nth-child(7) img {
+      width: 36vw;
+
+   }
+
+/*--------------planets end (1000px)------------*/
+
+
+
+   /*---------------- background animation start (1000px)---------------*/
+
+
+
+
+   .planet:nth-child(8) img {
+      width: 15vw;
+
+   }
+
+
+   .planet:nth-child(9) img {
+
+      width: 40vw;
+
+   }
+
+
+   .planet:nth-child(10) {
+      top: calc(10vh + 4vw);
+      left: 5vw;
+
+
+   }
+
+   .planet:nth-child(10) img {
+      width: 4vw;
+
+   }
+
+   @keyframes ufo_path {
+
+      0% {}
+
+      100% {
+         top: calc(100vh - 30vw);
+         left: 78vw;
+      }
+   }
+
+   @keyframes spaceship_path {
+
+      0% {}
+
+      100% {
+         top: calc(100vh - 30vw);
+         left: 75vw;
+      }
+   }
+
+
+
+
+
+   @keyframes ufo {
+      15% {
+         transform: scale(1);
+
+      }
+
+      97% {
+         transform: scale(1);
+      }
+
+      99% {
+         opacity: 1;
+         transform: scale(0);
+      }
+
+      100% {
+         width: 15vw;
+         opacity: 0;
+      }
+
+   }
+
+
+   .planet:nth-child(11) {
+      top: 10vh;
+      left: 20vw;
+
+   }
+
+   .planet:nth-child(11) img {
+      width: 15vw;
+   }
+
+   #spaceSship {
+      top: calc(10vh + 4vw);
+      left: 26vw;
+   }
+
+   #space_ship_img {
+
+      width: 5vw;
+
+   }
+
+
+   @keyframes spaceship {
+      15% {
+         transform: scale(1);
+
+      }
+
+      97% {
+         transform: scale(1);
+         ;
+         opacity: 1;
+      }
+
+      98% {
+         opacity: 0;
+         transform: scale(0);
+      }
+
+      100% {
+         width: 20vw;
+         opacity: 0;
+         rotate: 20deg;
+         transform: scale(0);
+      }
+
+   }
+
+   #portal2_cover_img {
+
+      width: 40vw;
+
+
+   }
+}
+
+   /*---------------- background animation end (1000px)---------------*/
+
+/*+++++++++*******++++++++++++------ midia with max-width:1000px end -----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:1000px end -----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:1000px end -----++++++++++++*********+++++++++++*/

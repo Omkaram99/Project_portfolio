@@ -1,0 +1,118 @@
+body{top:0;
+  position: absolute;
+    width: 100vw;height: 100%;
+    background:rgb(110, 103, 103) 100% 100% linear-gradient(to top right,rgb(31, 31, 31) ,rgb(164, 152, 152) )  no-repeat ;
+
+}
+
+
+.effort_cover a{
+  color:black;text-decoration:none;
+}
+.effort_cover{
+ 
+    position:absolute;
+    background-color: qua;
+    left:50%;
+    top:50%;
+    transform:translate(-50% , -50%);
+}
+
+/*-----------+++++++++++----portfoili start--------+++++++++++++---------*/
+.portfoilo img{
+position: absolute;
+    
+}
+
+.portfoilo{
+  position: relative;
+  text-align: center;
+}
+
+
+#portfoilo_icon{
+    position: relative;
+
+   width: 15vw;
+    background-image: linear-gradient(to top right,blue, gold ,green);
+    border: 2px outset white ;
+    box-shadow:3px 3px 10px  rgb(255, 0, 0);
+    border-radius: 10px;
+}
+.mrotate1{
+ 
+  position: relative;
+    top:30%;
+  left: 15%; transition: 10s linear;
+    width: 10%;
+
+}
+.mrotate2{
+      position: relative;overflow: hidden;
+  left: 20%;overflow: hidden;
+  top:37%; transition: 10s linear;
+    width: 20%;
+  
+}
+.portfoilo:hover .mrotate1 {
+rotate: 1360deg;
+}
+.portfoilo:hover .mrotate2{
+  rotate: -1360deg;
+  }
+  .portfoilo p{
+    position: absolute;
+    z-index: 1;
+    margin: 0%;top: 2%;
+    left:25%;
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    font-weight:bold;
+    font-size: 1.4vw;
+  }
+  .portfoilo h1{
+bottom: 5%;position:absolute;left: 6%;text-shadow: 2px 2px 5px white;
+margin: 0;padding: 0;font-size: 2vw;
+  }
+  .portfoilo:active{
+    scale:0.95;
+  }
+
+
+/*-----------+++++++++++----portfoili start--------+++++++++++++---------*/
+
+
+
+/*+++++++++*******++++++++++++------ midia with max-width:600px srart-----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:600px srart-----++++++++++++*********+++++++++++*/
+/*+++++++++*******++++++++++++------ midia with max-width:600px srart-----++++++++++++*********+++++++++++*/
+
+
+
+  @media screen and (max-width:600px){
+
+
+    #portfoilo_icon{
+     
+      width: 35vw;
+     
+      border-radius: 10px;
+  }
+ 
+  
+
+    .portfoilo p{
+     top: 3%;
+     font-size:3vw;
+    }
+    .portfoilo h1{
+  bottom: 10%;left: 10%;
+font-size: 4vw;
+    }
+ 
+
+  }
+
+
+
