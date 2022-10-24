@@ -205,7 +205,8 @@ function shareopen() {
 
 
     let share_img_location = share_img.getBoundingClientRect();
-    var share_img_total_right = "calc(100vw - " + share_img_location.left + "px - " + share_img.clientWidth / 2 + "px )";
+    
+    var share_img_total_right = "calc(" + document.getElementsByTagName('nav')[0].clientWidth + "px - " + share_img_location.left + "px - " + share_img.clientWidth / 2 + "px )";
     var share_img_total_top = "calc(" + share_img_location.top + "px + " + share_img.clientWidth / 2 + "px )";
     share_cover.style.top = share_img_total_top;
     share_cover.style.right = share_img_total_right;
@@ -306,10 +307,11 @@ function hire_open_close(open_close) {
         make_remove_active("make_active");
 
         hire_cover.style.transformOrigin = "50vw 100vh";
-        hire_cover.style.borderRadius = "100%"
+        hire_cover.style.borderRadius = "100%";
         hire_cover.style.transform = "scale(0)";
         setTimeout(function () {
-            hire_cover.style.transformOrigin = "50vw 00vh";
+            hire_cover.style.transformOrigin = "50vw "+ document.getElementsByTagName('nav')[0].clientHeight +"px";
+            
         }, 1500);
 
 
