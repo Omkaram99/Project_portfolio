@@ -561,7 +561,7 @@ body {
       0% {}
 
       100% {
-         top: calc(100vh - 30vw);
+         top: calc(100% - 20vw);
          left: 78vw;
       }
    }
@@ -571,7 +571,7 @@ body {
       0% {}
 
       100% {
-         top: calc(100vh - 30vw);
+         top: calc(100% - 20vw);
          left: 75vw;
       }
    }
